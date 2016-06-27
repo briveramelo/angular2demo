@@ -1,0 +1,6 @@
+node_modules/
+.vscode/
+font-awesome-4.6.3/
+typings/
+.DS_Store
+*.log
