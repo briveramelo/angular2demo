@@ -1,0 +1,204 @@
+<h1>Hello Angular</h1>
+
+<h2>JSON Communicator</h2>
+<demo-list
+    [script-name]="'communicator.component.ts'"
+    [list-items]="['JSON get', 'JSON post']"
+></demo-list>
+<communicator></communicator>
+
+<br/>
+
+<h2>Display Standard Icon</h2>
+<i class="glyphicon glyphicon-star"></i>
+
+<br/><br/>
+
+<h2>Display Favorite Items</h2>
+<demo-list
+    [script-name]="'favorite.component.ts'"
+    [list-items]="['Event Binding', 'class modification', 'ngClass Binding']"
+></demo-list>
+<favorite
+    [is-favorite]="post.isFavorite"
+    (change)="onFavoriteChange($event)">
+</favorite>
+
+<br/><br/>
+
+<h2>Display "Like" Counts</h2>
+<demo-list
+    [script-name]="'love-button.component.ts'"
+    [list-items]="['Event Binding', 'Event Bubbling']"
+></demo-list>
+<love-button
+    [is-loved]="post.isLoved"
+    [total-loves]="post.totalLoves"
+    (change)="onLoveChange($event)">
+</love-button>
+
+<br/><br/>
+
+<h2>Display "Vote" Counts</h2>
+<demo-list
+    [script-name]="'voter.component.ts'"
+    [list-items]="['More Involved Event Binding', 'Event Bubbling']"
+></demo-list>
+<voter
+    [my-vote]="post.myVote"
+    [total-votes]="post.totalVotes"
+    (vote)="onVoteChange($event)">
+</voter>
+
+<br/><br/>
+
+<h2>Authors Component</h2>
+<demo-list
+    [script-name]="'authors.component.ts'"
+    [list-items]="['[hidden] binding', '*ngFor', 'providers (service architecture)']"
+></demo-list>
+<authors [is-hidden]="true"></authors>
+
+<br/><br/>
+
+<h2>Courses Component</h2>
+<demo-list
+    [script-name]="'courses.component.ts'"
+    [list-items]="['ngIf', '*ngFor', 'providers (service architecture)', 'custom directives (autoexpand text box)']"
+></demo-list>
+<courses [is-showing]="false"></courses>
+
+<br/><br/>
+
+<h2>Twitter Feed Component</h2>
+<demo-list
+    [script-name]="'tweet.component.ts'"
+    [list-items]="['directives (nested components)', 'styles (embedded css)', 'providers (service architecture)', 'Output event emission']"
+></demo-list>
+<tweet (change)="onTweetLoveChange($event)"></tweet>
+
+<br/><br/>
+
+<h2>[(ngModel)] Binding </h2>
+<demo-list
+    [script-name]="'dynamic-title.component.ts'"
+    [list-items]="['ngModel binding', 'image sourcing']"
+></demo-list>
+<dyn-title></dyn-title>
+
+<br/><br/>
+
+<h2>ngSwitch Pill Buttons</h2>
+<demo-list
+    [script-name]="'pill-button.component.ts'"
+    [list-items]="['ngSwitch + template', '*ngFor', 'Input / Output', 'enums', '[class.active] binding']"
+></demo-list>
+<pill-button></pill-button>
+
+<br/><br/>
+
+<h2>Console Event Bubbling</h2>
+<demo-list
+    [script-name]="'console-click.component.ts'"
+    [list-items]="['Event Bubbling']"
+></demo-list>
+<console-click></console-click>
+
+<br/><br/>
+
+<h2>Pipe Formatting</h2>
+<demo-list
+    [script-name]="'format.component.ts'"
+    [list-items]="['pipe formatting']"
+></demo-list>
+<floormat></floormat>
+
+<br/><br/>
+
+<h2>Custom Pipe Formatting</h2>
+<demo-list
+    [script-name]="'custom-pipe.component.ts'"
+    [list-items]="['custom pipe formatting']"
+></demo-list>
+<custom-pipe></custom-pipe>
+
+<br/><br/>
+
+<h2>ngStylizing</h2>
+<demo-list
+    [script-name]="'ngstyle.component.ts'"
+    [list-items]="['css in html w/ [ngStyle]']"
+></demo-list>
+<ngstyler></ngstyler>
+
+<br/><br/>
+
+<h2>Elvis Operator (null)</h2>
+<demo-list
+    [script-name]="'elvis-operator.component.ts'"
+    [list-items]="['fluent null checking/handling']"
+></demo-list>
+<elvis></elvis>
+
+<br/><br/>
+
+<h2>Bootstrap Panels</h2>
+<demo-list
+    [script-name]="'bootstrap-panel.component.ts'"
+    [list-items]="['ng-content insertion from parent component']"
+></demo-list>
+<bs-panel>
+    <div class="heading">
+        This is the heading
+    </div>
+    <div class="body">
+        This is the body
+    </div>
+    <div class="body">
+        This is another body!
+    </div>
+</bs-panel>
+
+<br/><br/>
+
+<h2>Collapsable Elements</h2>
+<demo-list
+    [script-name]="'zippy.component.ts'"
+    [list-items]="['styleUrls for external css', 'Input', '[ngClass]', 'ng-content', '*ngIf']"
+></demo-list>
+<zippy title="'This is the zippy heading!'">
+    <div class="body"> This is the zippy body! </div>
+</zippy>
+
+<br/><br/>
+
+<h2>Contact Form</h2>
+<demo-list
+    [script-name]="'contact-form.component.ts'"
+    [list-items]="['form validation']"
+></demo-list>
+<contact-form></contact-form>
+
+<br/><br/><br/><br/>
+
+<h2>Subscription Form</h2>
+<demo-list
+    [script-name]="'email-form.component.ts'"
+    [list-items]="['form validation']"
+></demo-list>
+<email-form></email-form>
+
+<br/><br/>
+
+<h2>SignUp Form</h2>
+<demo-list
+    [script-name]="'signup-form.component.ts'"
+    [list-items]="['advanced form validation']"
+></demo-list>
+<signup-form></signup-form>
+
+<br/><br/>
+
+<github-profile></github-profile>
+
+<br/><br/>

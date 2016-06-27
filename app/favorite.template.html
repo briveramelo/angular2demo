@@ -1,0 +1,11 @@
+<i class="glyphicon + {{starState[starNum]}}" (click)="onClick()"></i>
+<!--OR like this-->
+<i 
+    class="glyphicon"
+
+    [ngClass]="{
+        'glyphicon-star-empty': !isFavorite,
+        'glyphicon-star': isFavorite
+    }"
+    (click)="onClick()">
+</i>

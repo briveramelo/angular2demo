@@ -1,0 +1,17 @@
+<div class="zippy">
+    <div
+        class="zippy-title"
+        (click)="onClick()">
+        {{title}}
+        <i
+            class="pull-right glyphicon"
+            [ngClass]="{
+                'glyphicon-chevron-down': !isShowing,
+                'glyphicon-chevron-up': isShowing
+            }">
+        </i>
+    </div>
+    <div *ngIf="isShowing" class="zippy-content">
+        <ng-content select=".body"></ng-content>
+    </div>
+</div>
